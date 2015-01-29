@@ -17,6 +17,10 @@ public class ScaleGenerator{
     //Minor 
     int[] minor = {2,1,2,2,1,2,2};
     String[] minorChords = { "min", "dim", "maj", "min", "min", "maj","maj" };
+
+    //Harmonic Minor
+    int[] harmonicMinor = { 2,1,2,2,1,3,1};
+    String[] harmonicMinorChords ={ "min", "dim", "aug", "min", "maj", "maj", "dim" };
     
     
     
@@ -38,6 +42,11 @@ public class ScaleGenerator{
             makeScale(root, minor);
             makeChords(mode);
         }
+
+        if (mode.equals("harmonic minor")){
+            makeScale(root, harmonicMinor);
+            makeChords(mode);
+        }
     }
     
     public void makeChords(String chords){
@@ -51,6 +60,12 @@ public class ScaleGenerator{
         if (chords.equals("minor")){
             for (int i = 0 ; i < minorChords.length; i++){
                 chordOutput[i] = scaleOutput[i] + minorChords[i];
+            }
+        }
+
+        if (chords.equals("harmonic minor")){
+            for (int i = 0 ; i < harmonicMinorChords.length; i++){
+                chordOutput[i] = scaleOutput[i] + harmonicMinorChords[i];
             }
         }
     }

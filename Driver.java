@@ -40,7 +40,7 @@ public class Driver implements ActionListener{
         cKey = new JComboBox(bKey);
 	pane.add(cKey);
 	
-	String[] bScale = {"major","minor"};
+	String[] bScale = {"major","minor","harmonic minor"};
         cScale = new JComboBox(bScale);
 	pane.add(cScale);
 
